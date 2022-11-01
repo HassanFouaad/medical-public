@@ -3,18 +3,40 @@ import React from "react";
 import Container from "@mui/material/Container";
 import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
+import axios from "axios";
+const aboutUsApi = `${process.env.NEXT_PUBLIC_API_URL}/public/about-us`;
+
+const getAboutUsApi = async () => {
+  try {
+    const {
+      data: { data },
+    } = await axios.get(aboutUsApi);
+    return {
+      data,
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      error: error?.response?.data?.error?.message || "Unkown Error",
+    };
+  }
+};
 
 export default function AboutUsFirst() {
-  const [aboutUs, setAboutUs] = React.useState([
-    {
-      text: "The Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers Stock The Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers Stock",
-      level: 1,
-    },
-    {
-      text: "The Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers Stock The Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers Stock \n The Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers StockThe Suitable Solution For Pharmacies And Medical Providers Stock",
-      level: 2,
-    },
-  ]);
+  const [aboutUs, setAboutUs] = React.useState([]);
+
+  const getAboutUs = React.useCallback(async () => {
+    const { error, data } = await getAboutUsApi();
+    if (error) {
+      return;
+    } else {
+      setAboutUs(data);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    getAboutUs();
+  }, [getAboutUs]);
 
   if (!aboutUs.length) return <></>;
 
