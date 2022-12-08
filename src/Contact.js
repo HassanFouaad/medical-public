@@ -29,7 +29,7 @@ export default function Contact() {
               href={process.env.NEXT_PUBLIC_CLIENT_URL}
               sx={{ color: "white" }}
             >
-              App Name
+              SanPly
             </MuiLink>{" "}
             {new Date().getFullYear()}.
           </Box>

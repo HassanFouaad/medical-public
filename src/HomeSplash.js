@@ -18,7 +18,7 @@ export default function HomeSplash() {
               variant="h1"
               fontWeight="bold"
             >
-              App Name
+              SanPly
             </Typography>
             <Typography
               component="div"
