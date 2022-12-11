@@ -15,7 +15,7 @@ export default function HomeSplash() {
             <Typography
               component="div"
               color="white"
-              variant="h1"
+              variant="h3"
               fontWeight="bold"
             >
               SanPly
@@ -23,7 +23,7 @@ export default function HomeSplash() {
             <Typography
               component="div"
               color="white"
-              variant="h5"
+              variant="h6"
               fontWeight="bold"
             >
               The Suitable Solution For Pharmacies And Medical Providers Stock

@@ -47,7 +47,19 @@ function DAppBar(props) {
                 },
               }}
             >
-              App Logo
+              <img
+                src="assets/logo.png"
+                alt="Sanply Logo"
+                height={82}
+                style={{
+                  filter: `
+              
+        drop-shadow(-1px 1px 0 white)
+        drop-shadow(1px -1px 0 white)
+        drop-shadow(-1px -1px 0 white);
+                  `,
+                }}
+              />
             </Typography>
             <Box>
               {navItems.map((item) => (

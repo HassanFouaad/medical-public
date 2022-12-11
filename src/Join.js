@@ -165,9 +165,9 @@ export default function Join() {
                   label={"Type"}
                   type="text"
                   InputProps={{
-                    autocomplete: "off",
+                    autoComplete: "off",
                     form: {
-                      autocomplete: "off",
+                      autoComplete: "off",
                     },
                   }}
                   placeholder={"Type"}
@@ -194,9 +194,9 @@ export default function Join() {
                   label={"First Name"}
                   type="text"
                   InputProps={{
-                    autocomplete: "off",
+                    autoComplete: "off",
                     form: {
-                      autocomplete: "off",
+                      autoComplete: "off",
                     },
                   }}
                   placeholder={"First Name"}
@@ -216,9 +216,9 @@ export default function Join() {
                   label={"Last Name"}
                   type="text"
                   InputProps={{
-                    autocomplete: "off",
+                    autoComplete: "off",
                     form: {
-                      autocomplete: "off",
+                      autoComplete: "off",
                     },
                   }}
                   placeholder={"Last Name"}
@@ -237,9 +237,9 @@ export default function Join() {
                   label={"Email"}
                   type="text"
                   InputProps={{
-                    autocomplete: "off",
+                    autoComplete: "off",
                     form: {
-                      autocomplete: "off",
+                      autoComplete: "off",
                     },
                   }}
                   placeholder={"Email"}
@@ -260,9 +260,9 @@ export default function Join() {
                       label={`${currentType} name`}
                       type="text"
                       InputProps={{
-                        autocomplete: "off",
+                        autoComplete: "off",
                         form: {
-                          autocomplete: "off",
+                          autoComplete: "off",
                         },
                       }}
                       placeholder={`${currentType} name`}
@@ -292,9 +292,9 @@ export default function Join() {
                           label={`${currentType} phone`}
                           type="number"
                           InputProps={{
-                            autocomplete: "off",
+                            autoComplete: "off",
                             form: {
-                              autocomplete: "off",
+                              autoComplete: "off",
                             },
                           }}
                           placeholder={`${currentType} phone`}
